@@ -21,8 +21,13 @@ SQLite for storing data locally
 
 
 💡 How to run locally:
+
 git clone https://github.com/vaishnavikarmegam05/tomycrypto.git
+
 cd tomycrypto
+
 pip install -r requirements.txt
+
 python app.py
+
 Then open http://127.0.0.1:5000/ in your browser.
