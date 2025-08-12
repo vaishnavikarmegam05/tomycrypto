@@ -1,0 +1,27 @@
+{% extends "base.html" %} {% block title %}History{% endblock %} {% block content %}
+<h3>Your History</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Action</th>
+            <th>File</th>
+            <th>Download</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for r in history %}
+        <tr>
+            <td>{{ r.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+            <td>{{ r.action }}</td>
+            <td>{{ r.original_name }}</td>
+            <td><a class="btn btn-sm btn-outline-primary" href="{{ url_for('download', filename=r.stored_name) }}">Download</a></td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan="4">No records yet.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
