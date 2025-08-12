@@ -1,0 +1,67 @@
+{% extends "base.html" %} {% block title %}Tomy Crypto — Dashboard{% endblock %} {% block content %}
+<!-- Full-screen background is handled by CSS in static/style.css -->
+<div class="hero">
+    <div class="overlay">
+        <div class="brand">
+            <img src="https://media.infopay.net/uploads/--cbd148ab80ddc91b21fdb655448bd111.webp" alt="TomyCrypto" class="logo">
+
+            <h1 class="brand-title">Tomy Crypto</h1>
+            <p class="brand-sub">Secure file encryption & decryption</p>
+        </div>
+
+        <div class="card-app">
+            <h3 class="mb-3">Encrypt / Decrypt</h3>
+            <p class="muted">Upload a file, enter a password. For decryption, upload the matching <code>.key</code> file too.</p>
+
+            <form method="post" enctype="multipart/form-data" id="encForm">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Mode</label>
+                        <select name="mode" id="mode" class="form-select">
+              <option value="encrypt">Encrypt</option>
+              <option value="decrypt">Decrypt</option>
+            </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">File</label>
+                        <input name="file" type="file" class="form-control" required>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Password</label>
+                        <input name="password" type="password" class="form-control" placeholder="Strong password" required>
+                    </div>
+
+                    <div class="col-12" id="keyRow" style="display:none;">
+                        <label class="form-label">Key file (for decrypt)</label>
+                        <input name="keyfile" type="file" class="form-control">
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary w-100">Process</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="mt-3">
+                <!-- Flask flash messages are already shown in base.html; download links appear in flashes -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    // toggle key-file input when mode is decrypt
+    const mode = document.getElementById('mode');
+    const keyRow = document.getElementById('keyRow');
+    mode.addEventListener('change', () => {
+        keyRow.style.display = mode.value === 'decrypt' ? 'block' : 'none';
+    });
+
+    // Initialize on load
+    document.addEventListener('DOMContentLoaded', () => {
+        keyRow.style.display = mode.value === 'decrypt' ? 'block' : 'none';
+    });
+</script>
+{% endblock %}

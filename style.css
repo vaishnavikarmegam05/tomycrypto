@@ -1,0 +1,103 @@
+/* Full-page background and layout */
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    background: #d2ccd9;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: url('/static/bg-crypto.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* dim overlay for readability */
+
+.overlay {
+    background: rgba(45, 38, 48, 0.55);
+    /* dark glass */
+    width: 100%;
+    max-width: 1100px;
+    margin: 32px;
+    border-radius: 14px;
+    padding: 36px;
+    box-shadow: 0 12px 40px rgba(141, 143, 150, 0.7);
+    color: #e6eef8;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 28px;
+}
+
+
+/* brand column */
+
+.brand {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 12px 20px;
+}
+
+.logo {
+    width: 110px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 28px rgba(224, 140, 243, 0.45);
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.brand-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.brand-sub {
+    margin: 0;
+    color: rgba(230, 238, 248, 0.8);
+}
+
+
+/* card-app column */
+
+.card-app {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(159, 235, 175, 0.514);
+}
+
+
+/* muted text */
+
+.muted {
+    color: rgba(230, 238, 248, 0.75);
+    font-size: .95rem;
+}
+
+
+/* responsive */
+
+@media (max-width: 900px) {
+    .overlay {
+        grid-template-columns: 1fr;
+    }
+    .brand {
+        align-items: center;
+        text-align: center;
+    }
+    .card-app {
+        margin-top: 8px;
+    }
+}
