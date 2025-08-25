@@ -1,0 +1,13 @@
+Certifications
+o EC-Council Certified Ethical Hacker (CEH)
+o TCM Security Junior Penetration Tester (eJPT)
+o EC-Council Certified Penetration Testing Professional (CPENT)
+o Offensive Security Certified Professional (OSCP)
+o Linux Network Administrator
+o Networking Administrator
+o CCNA
+o Certified Defensive Security Analyst (CDSA) Certification.
+o Certified Malware Analyst
+
+
+https://portswigger.net/web-security/all-topics

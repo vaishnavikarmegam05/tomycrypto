@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Decrypt File</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+            padding-top: 50px;
+        }
+        
+        form {
+            background: white;
+            padding: 20px;
+            display: inline-block;
+            border-radius: 8px;
+        }
+        
+        input,
+        button {
+            margin: 10px;
+            padding: 8px;
+        }
+        
+        button {
+            background: #dc3545;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        
+        button:hover {
+            background: #c82333;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Decrypt File</h1>
+    <form action="/decrypt" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required><br>
+        <input type="password" name="password" placeholder="Enter password" required><br>
+        <button type="submit">Decrypt</button>
+    </form>
+    <br>
+    <a href="/">⬅ Back</a>
+</body>
+
+</html>

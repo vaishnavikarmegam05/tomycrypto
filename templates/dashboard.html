@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %} Dashboard - Tomy Crypto {% endblock %} {% block content %}
+<h3>Encrypt / Decrypt</h3>
+<p>Upload a file, provide a password. For decrypt upload the .enc file and its .key.</p>
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row g-3">
+        <div class="col-md-4">
+            <label>Mode</label>
+            <select name="mode" class="form-select">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+            </select>
+        </div>
+        <div class="col-md-4">
+            <label>File</label>
+            <input name="file" type="file" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+            <label>Password</label>
+            <input name="password" type="password" class="form-control" required>
+        </div>
+        <div class="col-md-12" id="keyfileDiv" style="display:none;">
+            <label>Key file (for decrypt)</label>
+            <input name="keyfile" type="file" class="form-control">
+        </div>
+        <div class="col-12">
+            <button class="btn btn-success">Process</button>
+        </div>
+    </div>
+</form>
+
+<script>
+    document.querySelector('select[name="mode"]').addEventListener('change', function() {
+        document.getElementById('keyfileDiv').style.display = this.value === 'decrypt' ? 'block' : 'none';
+    });
+</script>
+{% endblock %}
