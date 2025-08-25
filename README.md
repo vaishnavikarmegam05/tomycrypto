@@ -67,3 +67,43 @@ Cloud file storage (AWS S3, GCP, etc.)
 Support for multiple encryption algorithms
 
 Role-based access control
+🛠️ How to Run the Project Locally
+
+Clone the repository
+
+git clone https://github.com/vaishnavikarmegam05/tomycrypto.git
+cd tomycrypto
+
+
+Create a virtual environment (recommended)
+
+python -m venv venv
+venv\Scripts\activate   # For Windows  
+source venv/bin/activate  # For Mac/Linux  
+
+
+Install dependencies
+
+pip install -r requirements.txt
+
+
+Run the application
+
+python app.py
+
+
+Open in browser
+
+http://127.0.0.1:5000/
+
+🌍 Deployment (Live Demo)
+
+This project is deployed on Render.
+
+Live Link: 👉 https://your-app-name.onrender.com
+
+Deployed using:
+
+GitHub → Render auto-deploy integration
+
+gunicorn as the production server (gunicorn app:app)
