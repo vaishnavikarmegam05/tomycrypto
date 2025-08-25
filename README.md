@@ -47,16 +47,9 @@ pip install -r requirements.txt
 # Run the app
 python app.py
 
-
-App will be available at: http://127.0.0.1:5000/
-
-📸 Screenshots (optional)
-
-Add a few screenshots of your app here
-
 🌍 Deployment
 
-Live demo: https://your-app-name.onrender.com
+Live demo: https://tomycrypto-2.onrender.com
 
 📖 Future Enhancements
 
@@ -92,15 +85,11 @@ Run the application
 python app.py
 
 
-Open in browser
-
-http://127.0.0.1:5000/
-
 🌍 Deployment (Live Demo)
 
 This project is deployed on Render.
 
-Live Link: 👉 https://your-app-name.onrender.com
+Live Link: 👉 https://tomycrypto-1.onrender.com
 
 Deployed using:
 
